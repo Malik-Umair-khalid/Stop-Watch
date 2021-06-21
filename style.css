@@ -1,0 +1,48 @@
+
+body{
+    background-image: url('bN5ntz.jpg');
+    background-position: center;
+}
+.mainDiv{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(0, 0, 0, 0.8);
+    
+    border-radius: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+h1{
+    color: white;
+    display: inline;
+    margin-top: 500px;
+    margin-right: 20px;
+}
+.subdiv{
+    padding-top: 50px;
+}
+.btn{
+    text-align: center;
+    margin-right: 2px;
+}
+hr{
+    width: 400px;
+}
+.hdiv{
+    padding-top: 20px;
+}
+.firsthr{
+    width: 300px;
+}
+.lap-div{
+    margin-top: 20px;
+}
+.hidden{
+    visibility: hidden;
+    background-color: white;
+}
+.visibale{
+    visibility: visible;
+}
