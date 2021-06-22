@@ -8,7 +8,7 @@ var startButton = document.getElementById('StartBtn')
 var stopButton = document.getElementById('StopBtn')
 
 function startWatch() {
-    startButton.className = 'hidden'
+    startButton.disabled = true; 
     watch = setInterval(function () {
         miliseconds += 1
         document.getElementById('miliSecs').innerText = miliseconds + 'ms'
@@ -27,30 +27,37 @@ function startWatch() {
                 }
             }
         }
-        stopButton.className = 'visible'
+        stopButton.disabled = false;
     }, 10)
 }
 function stopWatch() {
-    stopButton.className = 'hidden'
+    stopButton.disabled = true;
     clearInterval(watch);
-    startButton.className = 'visible'
+    startButton.disabled = false;
 }
 function reset() {
+    document.getElementById('lap').innerHTML = ''
+    startButton.disabled = false;
+
     clearInterval(watch);
     var milliseconds = document.getElementById('miliSecs')
 milliseconds.innerText = 'ms'
 var myseconds;
 var myminuts;
 var myhours;
+miliseconds = 0
+secs = 0;
+minuts = 0;
+hours = 0
 myseconds = document.getElementById('secs').innerText = 's'
 myminuts = document.getElementById('minuts').innerText = 'm'
-myhours = document.getElementById('hours').innerText = 'h'
+myhours = document.getElementById('hours').innerText =  'h'
 }
 function lapTime(){
   document.getElementById('lap').innerHTML += hours + ':' + minuts + ':' + secs + ':' + miliseconds + '\n'
 }
 
-function clearlap(){
+function cearlap(){
     document.getElementById('lap').innerHTML = ""
 
 }
